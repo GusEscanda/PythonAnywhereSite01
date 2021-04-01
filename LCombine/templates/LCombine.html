@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <title>Combine Letters</title>
+    </head>
+
+    <body>
+        <h1>Combine Letters</h1>
+        <form action="" method="post"> {% csrf_token %}
+            {{ form.non_field_errors }}
+            <table>
+                <tr>
+                    <td>
+                        {{ form.letters.errors }} {{ form.letters.label_tag }}
+                    </td>
+                    <td>
+                        {{ form.letters }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.length.errors }} {{ form.length.label_tag }}
+                    </td>
+                    <td>
+                        {{ form.length }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.filterFrom.errors }} {{ form.filterFrom.label_tag }}
+                    </td>
+                    <td>
+                        {{ form.filterFrom }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.filterUntil.errors }} {{ form.filterUntil.label_tag }}
+                    </td>
+                    <td>
+                        {{ form.filterUntil }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.useDict.errors }} {{ form.useDict.label_tag }}
+                    </td>
+                    <td>
+                        {{ form.useDict }}
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+        <p> --- </p>
+        {% for i in combList %}
+            <p> {{i}} </p>
+        {% endfor %}
+        <p> --- </p>
+    </body>
+</html>

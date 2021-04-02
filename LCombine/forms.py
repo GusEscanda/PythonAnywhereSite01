@@ -6,4 +6,5 @@ class MainForm(forms.Form):
     filterFrom  = forms.CharField(label='From', help_text='Display only words alphabetically greater than or equal to...', initial='', required=False)
     filterUntil = forms.CharField(label='Until', help_text='Display only words alphabetically less than or equal to...', initial='', required=False)
     useDict     = forms.BooleanField(label='Use Dict', initial=True, required=False, help_text='Check to display only words in the installed dictionary')
+    langTag     = forms.CharField(label='Language Tag', help_text='The tag code for the dictionary', initial='en_US', required=False)
 

@@ -51,6 +51,14 @@
                         {{ form.useDict }}
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        {{ form.langTag.errors }} {{ form.langTag.label_tag }}
+                    </td>
+                    <td>
+                        {{ form.langTag }}
+                    </td>
+                </tr>
             </table>
             <input type="submit" value="Submit">
         </form>

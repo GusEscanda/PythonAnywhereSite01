@@ -51,7 +51,13 @@ def homePage(request):
         if form.is_valid():
             # process the data in form.cleaned_data as required
             d = form.cleaned_data
-            combList = palabras( d['letters'].lower(), d['length'], d['filterFrom'].lower(), d['filterUntil'].lower(), enchant.Dict("en_US") if d['useDict'] else None )
+            combList = palabras( 
+                d['letters'].lower(), 
+                d['length'], 
+                d['filterFrom'].lower(), 
+                d['filterUntil'].lower(), 
+                enchant.Dict(d['langTag']) if d['useDict'] else None 
+            )
             return render( request, "LCombine.html", { 'form':form, 'combList':combList } )
         else:
             pass # if the form is not valid, leave it unchanged so the templete will display the errors

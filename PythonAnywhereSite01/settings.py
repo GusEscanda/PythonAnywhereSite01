@@ -25,7 +25,7 @@ SECRET_KEY = '0^$(@xulawsvto0i_4%p&%j4+*v-!=0rtvs$=@(ii)=-*5y(@5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['GusEscanda.pythonanywhere.com']
+ALLOWED_HOSTS = ['GusEscanda.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition

@@ -14,7 +14,6 @@ def combLetras( letras, largo = 0 ):
     # (sin repetir letra salvo que ésta aparezca varias veces en 'letras')
     if largo <= 0 or largo > len(letras):
         largo = len(letras)
-
     if largo == 0:
         return []
     elif largo == 1:
